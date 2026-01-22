@@ -1,12 +1,3 @@
-console.log('JS CARGADO BIEN! YUPIIII');
+const api_key = import.meta.env.api_key
 
-const btn = document.querySelector("#saludar");
-
-console.log('Boton', btn);
-
-if (btn) {
-    btn.addEventListener("click", () => {
-        console.log("CLICK");
-        alert("hola");
-    });
-}
+console.log(navigator);
