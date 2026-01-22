@@ -1,4 +1,3 @@
-
 async function main() {
     try {
         //Call get Position
@@ -16,6 +15,8 @@ async function main() {
         }
 
         console.log(stationId);
+
+        //Get current data
 
     } catch (e) {
 
@@ -68,7 +69,3 @@ function selectBestStation(loc) {
 
     return stations[0];
 }
-
-//3. Get weather Data!
-
-//4. Get forecast!
