@@ -10,7 +10,7 @@ export const GET: APIRoute = async ({ request }) => {
     }
 
     const data = await weatherFetch(
-         "/v2/pws/observations/current",
+        "/v2/pws/observations/current",
         {
         stationId,
         format: "json",

@@ -17,9 +17,29 @@ async function main() {
         console.log(stationId);
 
         //Get current data
+        const currentRes = await fetch(`/api/current?stationId=${stationId.id}`);
+
+        if (!currentRes.ok) {
+            throw new Error("Error fetching current data")
+        }
+
+        const currentData = await currentRes.json();
+
+        console.log("Current Weather:", currentData);
+
+        //Get forecast data
+        const forecastRes = await fetch(`/api/forecast?lat=${lat}&lon=${lon}`);
+
+        if (!forecastRes.ok) {
+            throw new Error("Error fetching forecast data");
+        }
+
+        const forecastData = await forecastRes.json();
+
+        console.log("Forecast 5 days:", forecastData);
 
     } catch (e) {
-
+        console.error("Error:", e);
     }
 }
 
